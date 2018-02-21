@@ -128,9 +128,9 @@ public class FichaVehiculo extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonGuardarActionPerformed
-       String a=Marca.getText();
-       cilindro.setText(a);
-        model.setText(a);// TODO add your handling code here:
+       String a=textoMarca.getText();
+       textoCilindraje.setText(a);
+        textoModelo.setText(a);// TODO add your handling code here:
     }//GEN-LAST:event_botonGuardarActionPerformed
 
     private void textoCilindrajeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textoCilindrajeActionPerformed
