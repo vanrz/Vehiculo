@@ -36,33 +36,31 @@ public class FichaVehiculo extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        textoMarca = new javax.swing.JLabel();
-        textoCilindraje = new javax.swing.JLabel();
-        textoModelo = new javax.swing.JLabel();
-        textoAno = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
+        Marca = new javax.swing.JLabel();
+        cilindro = new javax.swing.JLabel();
+        model = new javax.swing.JLabel();
+        ano = new javax.swing.JLabel();
+        textoMarca = new javax.swing.JTextField();
+        textoCilindraje = new javax.swing.JTextField();
+        textoModelo = new javax.swing.JTextField();
+        textoAnio = new javax.swing.JTextField();
         botonGuardar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        textoMarca.setText("Marca:");
+        Marca.setText("Marca:");
 
-        textoCilindraje.setText("Cilindraje:");
+        cilindro.setText("Cilindraje:");
 
-        textoModelo.setText("Modelo:");
+        model.setText("Modelo:");
 
-        textoAno.setText("Año:");
+        ano.setText("Año:");
 
-        jTextField1.setText("jTextField1");
-
-        jTextField2.setText("jTextField2");
-
-        jTextField3.setText("jTextField3");
-
-        jTextField4.setText("jTextField4");
+        textoCilindraje.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textoCilindrajeActionPerformed(evt);
+            }
+        });
 
         botonGuardar.setText("Guardar");
         botonGuardar.addActionListener(new java.awt.event.ActionListener() {
@@ -79,23 +77,23 @@ public class FichaVehiculo extends javax.swing.JFrame {
                 .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(textoAno)
+                        .addComponent(ano)
                         .addGap(29, 29, 29)
-                        .addComponent(jTextField4))
+                        .addComponent(textoAnio))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(52, 52, 52)
-                        .addComponent(jTextField2))
+                        .addComponent(textoCilindraje))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(textoMarca)
+                        .addComponent(Marca)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField1))
+                        .addComponent(textoMarca))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(textoModelo)
+                        .addComponent(model)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(textoCilindraje)
+                        .addComponent(cilindro)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField3)))
+                        .addComponent(textoModelo)))
                 .addGap(85, 85, 85))
             .addGroup(layout.createSequentialGroup()
                 .addGap(171, 171, 171)
@@ -107,20 +105,20 @@ public class FichaVehiculo extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(textoMarca)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Marca)
+                    .addComponent(textoMarca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(textoCilindraje)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cilindro)
+                    .addComponent(textoCilindraje, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(textoModelo)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(model)
+                    .addComponent(textoModelo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(textoAno)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ano)
+                    .addComponent(textoAnio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
                 .addComponent(botonGuardar)
                 .addGap(29, 29, 29))
@@ -130,10 +128,14 @@ public class FichaVehiculo extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonGuardarActionPerformed
-       String a=textoMarca.getText();
-       textoCilindraje.setText(a);
-        textoModelo.setText(a);// TODO add your handling code here:
+       String a=Marca.getText();
+       cilindro.setText(a);
+        model.setText(a);// TODO add your handling code here:
     }//GEN-LAST:event_botonGuardarActionPerformed
+
+    private void textoCilindrajeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textoCilindrajeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textoCilindrajeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -171,14 +173,14 @@ public class FichaVehiculo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Marca;
+    private javax.swing.JLabel ano;
     private javax.swing.JButton botonGuardar;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JLabel textoAno;
-    private javax.swing.JLabel textoCilindraje;
-    private javax.swing.JLabel textoMarca;
-    private javax.swing.JLabel textoModelo;
+    private javax.swing.JLabel cilindro;
+    private javax.swing.JLabel model;
+    private javax.swing.JTextField textoAnio;
+    private javax.swing.JTextField textoCilindraje;
+    private javax.swing.JTextField textoMarca;
+    private javax.swing.JTextField textoModelo;
     // End of variables declaration//GEN-END:variables
 }
