@@ -6,17 +6,25 @@
 package Parqueadero;
 
 import Vehiculos.Moto;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author Estudiantes
  */
 public class FichaVehiculo2 extends javax.swing.JFrame {
+    Moto misMotos[]=new Moto[50];
+    
+    
     Moto miMoto= new Moto();
     /**
      * Creates new form FichaVehiculo2
      */
     public FichaVehiculo2() {
+        for(int i=0;i<50;i++){
+            misMotos [i]=new Moto();
+        }
+            
         initComponents();
     }
 
@@ -132,6 +140,8 @@ public class FichaVehiculo2 extends javax.swing.JFrame {
         miMoto.modelo=textoModelo.getText(); 
         miMoto.cilindraje=Integer.parseInt (textoCilindraje.getText());
         miMoto.año=Integer.parseInt(textoAño.getText());
+        
+        JOptionPane.showMessageDialog(this,"guardada!");
                // TODO add your handling code here:
     }//GEN-LAST:event_botonGuardarMouseClicked
 
